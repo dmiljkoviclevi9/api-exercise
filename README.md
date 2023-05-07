@@ -1,5 +1,5 @@
 # api-exercise
-[![Test](https://img.shields.io/badge/setup-automated-blue?logo=gitpod)](https://github.com/dmiljkoviclevi9/api-exercise/actions/workflows/nodejs-test.yml)
+[![Test](https://img.shields.io/badge/setup-automated-blue?logo=npm)](https://github.com/dmiljkoviclevi9/api-exercise/actions/workflows/nodejs-test.yml)
 [![Test](https://badgen.net/badge/failing/8/red?icon=github)](https://github.com/dmiljkoviclevi9/api-exercise/actions/runs/4909558166/jobs/8766037036)
 [![Test](https://badgen.net/badge/passing/9/green?icon=github)](https://github.com/dmiljkoviclevi9/api-exercise/actions/workflows/nodejs-test.yml)
 
