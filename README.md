@@ -8,4 +8,5 @@
 # Overview
 This is an API test automation exercise with documentation provided. The exercise requires testing the CRUD operation of a REST API.
 
-# [Trigger a run](https://github.com/dmiljkoviclevi9/api-exercise/actions/workflows/nodejs-test.yml)
+### [Trigger a run](https://github.com/dmiljkoviclevi9/api-exercise/actions/workflows/nodejs-test.yml)
+Run the workflow, open the finished Node.js Test run and check the results in "Run tests" step.
