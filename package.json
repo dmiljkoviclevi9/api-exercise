@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "test": "node node-js/test.js",
+    "clr": "node node-js/cleanAll.js"
+  }
+}
