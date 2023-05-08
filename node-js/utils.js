@@ -80,7 +80,7 @@ async function cleanupEntries(apiURL) {
     const payload = { main_key: entry.main_key.toString() };
     console.log('Sending DELETE request with payload:', payload);
     const response = await httpRequest(apiURL, "DELETE", payload);
-    console.log('Response:', response.statusCode, response.body);
+    console.log('Response:', response.statusCode, response.data);
   }
 }
 

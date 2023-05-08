@@ -26,10 +26,8 @@ async function test(description, callback) {
   console.log("Running tests...\n");
 
   // Cleanup: Remove any entries before start
-  await test("Cleanup all entries", async () => {
-    await cleanupEntries(apiURL);
-  });
-
+  await cleanupEntries(apiURL);
+  
   // Test adding a new entry
   await test("Add a new entry", async () => {
     const response = await httpRequest(apiURL, "PUT", {
@@ -293,7 +291,7 @@ async function test(description, callback) {
   });
 
   // Test the quota limit
-  await test("Add entries until quota is reached", async () => {
+  await test("Verify the storage quota limit is 10 entries", async () => {
     // Count the existing number of entries
     const existingEntries = await httpRequest(apiURL, "GET");
     const existingEntryCount = existingEntries.data.length;
