@@ -18,13 +18,13 @@ Run the workflow, open the finished Node.js Test run and check the results in "R
 | Add a new entry | Happy Flow | PUT | Passing ✅ |
 | Get all entries and verify the entry added by test is present | Happy Flow | GET | Passing ✅ |
 | Update an existing entry | Happy Flow | POST | Passing ✅ |
-| Update a non-existent entry | Unhappy Flow | POST | Failing ❌ - 'value dose not exist' |
+| Update a non-existent entry | Unhappy Flow | POST | Failing ❌ - 'value **dose** not exist' |
 | Delete an entry | Happy Flow | DELETE | Passing ✅ |
-| Delete a non-existent entry | Unhappy Flow | DELETE | Failing ❌ |
-| Add entry with integer value | Unhappy Flow | PUT | Failing ❌ |
-| Add entry with boolean value | Unhappy Flow | PUT | Failing ❌ |
-| Add entry with object as value | Unhappy Flow | PUT | Failing ❌ |
-| Add entry with array as value | Unhappy Flow | PUT | Failing ❌ |
+| Delete a non-existent entry | Unhappy Flow | DELETE | Failing ❌ - expected 400, actual 200 OK |
+| Add entry with integer value | Unhappy Flow | PUT | Failing ❌ - expected 400, actual 200 OK|
+| Add entry with boolean value | Unhappy Flow | PUT | Failing ❌ - expected 400, actual 200 OK|
+| Add entry with object as value | Unhappy Flow | PUT | Failing ❌ - expected 400, actual 200 OK|
+| Add entry with array as value | Unhappy Flow | PUT | Failing ❌ - expected 400, actual 200 OK|
 | Add entry with integer main_key | Unhappy Flow | PUT | Passing ✅ |
 | Add entry with boolean main_key | Unhappy Flow | PUT | Passing ✅ |
 | Add entry with object as main_key | Unhappy Flow | PUT | Passing ✅ |
@@ -33,4 +33,4 @@ Run the workflow, open the finished Node.js Test run and check the results in "R
 | PUT response is valid JSON | Happy Flow | PUT | Passing ✅ |
 | DELETE response is valid JSON | Happy Flow | DELETE | Passing ✅ |
 | Verify the storage quota limit is 10 entries | Happy Flow | PUT | Failing ❌ - Quota limit should be 10, but API allows 11 entries.|
-| Check if the quota limit message is as expected | Happy Flow | PUT | Failing ❌ - 'you reached your quta'|
+| Check if the quota limit message is as expected | Happy Flow | PUT | Failing ❌ - 'you reached your **quta**'|
