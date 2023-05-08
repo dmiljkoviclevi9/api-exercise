@@ -7,7 +7,7 @@
 
 # Overview
 This project provides automated testing for the CRUD operations of a REST API.
-To run tests, clone the repository and open a terminal window in the root directory. Then, run the command npm test. To clean up the API storage, run the command npm run clr.
+To run tests, clone the repository and open a terminal window in the root directory. Then, run the command **npm test**. To clean up the API storage, run the command **npm run clr**.
 
 ### [Run Node.js Test](https://github.com/dmiljkoviclevi9/api-exercise/actions/workflows/nodejs-test.yml)
 Run the workflow, open the finished Node.js Test run and check the results in "Run tests" step.
