@@ -251,6 +251,47 @@ async function test(description, callback) {
     assert.strictEqual(response.statusCode, 400);
   });
 
+  // Test: Check if PUT response is valid JSON
+  test("PUT response is valid JSON", async () => {
+    const response = await httpRequest(apiURL, "PUT", {
+      main_key: "test_put_key",
+      value: "test_put_value",
+    });
+
+    if (typeof response !== "object") {
+      throw new Error("PUT response is not a valid JSON object");
+    }
+  });
+
+  // Test: Check if POST response is valid JSON
+  test("POST response is valid JSON", async () => {
+    const response = await httpRequest(apiURL, "POST", {
+      main_key: "test_post_key",
+      value: "test_post_value",
+    });
+
+    if (typeof response !== "object") {
+      throw new Error("POST response is not a valid JSON object");
+    }
+  });
+
+  // Test: Check if DELETE response is valid JSON
+  test("DELETE response is valid JSON", async () => {
+    // First, ensure there is an entry to delete
+    await httpRequest(apiURL, "PUT", {
+      main_key: "test_delete_key",
+      value: "test_delete_value",
+    });
+
+    const response = await httpRequest(apiURL, "DELETE", {
+      main_key: "test_delete_key",
+    });
+
+    if (typeof response !== "object") {
+      throw new Error("DELETE response is not a valid JSON object");
+    }
+  });
+
   // Test the quota limit
   await test("Add entries until quota is reached", async () => {
     // Count the existing number of entries
@@ -319,7 +360,6 @@ async function test(description, callback) {
       so please take this into account when using this API. 
   
   `);
-  
 
   // Close the server after all tests have completed
   proxyServer.close(() => {
