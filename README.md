@@ -13,24 +13,24 @@ To run tests, clone the repository and open a terminal window in the root direct
 Run the workflow, open the finished Node.js Test run and check the results in "Run tests" step.
 
 # Tests
-| Test | Flow | Method | Status |
-| -------- | -------- | -------- | -------- |
-| Add a new entry | Happy | PUT | Passing ✅ |
-| Get all entries and verify the entry added by test is present | Happy | GET | Passing ✅ |
-| Update an existing entry | Happy | POST | Passing ✅ |
-| Update a non-existent entry | Unhappy | POST | Failing ❌ - 'value **dose** not exist' |
-| Delete an entry | Happy | DELETE | Passing ✅ |
-| Delete a non-existent entry | Unhappy | DELETE | Failing ❌ - expected 400, actual 200 OK |
-| Add entry with integer value | Unhappy | PUT | Failing ❌ - expected 400, actual 200 OK|
-| Add entry with boolean value | Unhappy | PUT | Failing ❌ - expected 400, actual 200 OK|
-| Add entry with object as value | Unhappy | PUT | Failing ❌ - expected 400, actual 200 OK|
-| Add entry with array as value | Unhappy | PUT | Failing ❌ - expected 400, actual 200 OK|
-| Add entry with integer main_key | Unhappy | PUT | Passing ✅ |
-| Add entry with boolean main_key | Unhappy | PUT | Passing ✅ |
-| Add entry with object as main_key | Unhappy | PUT | Passing ✅ |
-| Add entry with array as main_key | Unhappy | PUT | Passing ✅ |
-| POST response is valid JSON | Happy | POST | Passing ✅ |
-| PUT response is valid JSON | Happy | PUT | Passing ✅ |
-| DELETE response is valid JSON | Happy | DELETE | Passing ✅ |
-| Verify the storage quota limit is 10 entries | Happy | PUT | Failing ❌ - Quota limit should be 10, but API allows 11 entries.|
-| Check if the quota limit message is as expected | Happy | PUT | Failing ❌ - 'you reached your **quta**'|
+|#| Test | Flow | Method | Status |
+| -------- | -------- | -------- | -------- | -------- |
+|1.| Add a new entry | Happy | PUT | Passing ✅ |
+|2.| Get all entries and verify the entry added by test is present | Happy | GET | Passing ✅ |
+|3.| Update an existing entry | Happy | POST | Passing ✅ |
+|4.| Update a non-existent entry | Unhappy | POST | Failing ❌ - 'value **dose** not exist' |
+|5.| Delete an entry | Happy | DELETE | Passing ✅ |
+|6.| Delete a non-existent entry | Unhappy | DELETE | Failing ❌ - expected 400, actual 200 OK |
+|7.| Add entry with integer value | Unhappy | PUT | Failing ❌ - expected 400, actual 200 OK|
+|8.| Add entry with boolean value | Unhappy | PUT | Failing ❌ - expected 400, actual 200 OK|
+|9.| Add entry with object as value | Unhappy | PUT | Failing ❌ - expected 400, actual 200 OK|
+|10.| Add entry with array as value | Unhappy | PUT | Failing ❌ - expected 400, actual 200 OK|
+|11.| Add entry with integer main_key | Unhappy | PUT | Passing ✅ |
+|12.| Add entry with boolean main_key | Unhappy | PUT | Passing ✅ |
+|13.| Add entry with object as main_key | Unhappy | PUT | Passing ✅ |
+|14.| Add entry with array as main_key | Unhappy | PUT | Passing ✅ |
+|15.| POST response is valid JSON | Happy | POST | Passing ✅ |
+|16.| PUT response is valid JSON | Happy | PUT | Passing ✅ |
+|17.| DELETE response is valid JSON | Happy | DELETE | Passing ✅ |
+|18.| Verify the storage quota limit is 10 entries | Happy | PUT | Failing ❌ - Quota limit should be 10, but API allows 11 entries.|
+|19.| Check if the quota limit message is as expected | Happy | PUT | Failing ❌ - 'you reached your **quta**'|
